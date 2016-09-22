@@ -36,8 +36,8 @@ namespace _08_Orange_Tree
         internal void EatOrange(int v)
         {
             orangesEaten = orangesEaten + v;
+            if (numOranges < orangesEaten)
+                throw new IndexOutOfRangeException ("You can't eat an orange that isn't there!There are 0 oranges available to eat");
         }
-
-        "You can't eat an orange that isn't there!  There are 0 oranges available to eat";
     }
 }
