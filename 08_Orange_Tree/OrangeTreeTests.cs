@@ -83,12 +83,12 @@ namespace _08_Orange_Tree
             orangeTree.EatOrange(3);
             Assert.AreEqual(4, orangeTree.OrangesEaten);
         }
-        //[TestMethod]
-        //[ExpectedException(typeof(IndexOutOfRangeException), "You can't eat an orange that isn't there!  There are 0 oranges available to eat")]
-        //public void ShouldNotLetYouPickFruitThatIsNotThere()
-        //{
-        //    orangeTree.EatOrange(1);
-        //}
+        [TestMethod]
+        [ExpectedException(typeof(IndexOutOfRangeException), "You can't eat an orange that isn't there!  There are 0 oranges available to eat")]
+        public void ShouldNotLetYouPickFruitThatIsNotThere()
+        {
+            orangeTree.EatOrange(1);
+        }
 
 
     }
